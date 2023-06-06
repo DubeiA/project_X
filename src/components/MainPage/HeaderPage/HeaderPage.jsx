@@ -5,8 +5,8 @@ import { Gi3DStairs, GiCharacter, GiCheckboxTree } from 'react-icons/gi';
 const headerItems = [
   { to: '/', title: 'Home', icon: <Gi3DStairs className={css.icon} /> },
   {
-    to: '/message',
-    title: 'message',
+    to: '/menu',
+    title: 'menu',
     icon: <GiCheckboxTree className={css.icon} />,
   },
   {
@@ -20,7 +20,7 @@ export const HeaderPage = () => {
   return (
     <nav className={css.nav}>
       <ul>
-        {headerItems.map(headerItem => (
+        {headerItems.map((headerItem, index) => (
           <li key={headerItem.title}>
             <NavLink
               //   className={({ isActive }) => (isActive ? css.nav_active : null)}

@@ -1,6 +1,6 @@
 .nav {
-  background-color: #5148f8;
-  color: white;
+  background: linear-gradient(to right, #004ff9, #fff94c);
+  color: rgb(14, 4, 207);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,10 +26,13 @@
   padding: 20px;
   border-radius: 50%;
   font-size: large;
+  font-weight: 800;
 }
 
 .nav li {
   height: 100%;
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  position: relative;
 }
 
 .nav_active {
@@ -38,7 +41,8 @@
 
 .nav li:hover {
   border-radius: 50%;
-  background-color: #b6df48;
+  /* background-color: #b6df48; */
+  transform: scale(1.2);
 }
 
 .icon {
@@ -46,4 +50,9 @@
   margin-right: 10px;
   height: 2rem;
   width: 2rem;
+}
+
+.drop {
+  fill: rgb(251, 188, 26);
+  margin-left: 5px;
 }

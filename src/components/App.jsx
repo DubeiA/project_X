@@ -1,6 +1,6 @@
 // import { UserList } from './components/UserList';
-import { Layout } from './Layout/Layout';
-import { Home } from './Home/Home';
+import { Layout } from './MainPage/Layout/Layout';
+import { Home } from './MainPage/Home/Home';
 
 import { Routes, Route } from 'react-router-dom';
 
