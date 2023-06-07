@@ -1,0 +1,24 @@
+.header {
+  text-align: center;
+  font-size: 40px;
+  color: #ff7300;
+}
+
+.linkHome {
+  text-decoration: none;
+  position: absolute;
+
+  top: 90px;
+  left: 30px;
+
+  padding: 10px;
+
+  border-radius: 15px;
+
+  background-color: #ff7300;
+  color: aliceblue;
+}
+
+.linkHome:hover {
+  background-color: #111;
+}

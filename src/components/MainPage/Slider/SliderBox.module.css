@@ -1,4 +1,17 @@
 .content {
   text-align: center;
-  padding: 40px;
+}
+
+.container {
+  text-align: center;
+  margin-top: 25px;
+}
+.contentLink {
+  text-decoration: none;
+  color: black;
+  font-size: larger;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; */
 }

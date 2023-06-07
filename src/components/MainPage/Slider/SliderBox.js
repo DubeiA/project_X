@@ -1,5 +1,5 @@
 import Slider from 'react-slick';
-
+import { Link } from 'react-router-dom';
 import css from './SliderBox.module.css';
 
 import 'slick-carousel/slick/slick.css';
@@ -18,48 +18,48 @@ export function SliderBox() {
 
   return (
     <Slider {...settings}>
-      <div>
-        <h3 className={css.content}>
+      <div className={css.container}>
+        <Link className={css.contentLink} to={'/menu/weather'}>
+          Weather Page
+          <span role="img" aria-label="Greeting icon">
+            💁‍♀️
+          </span>
+        </Link>
+      </div>
+      <div className={css.container}>
+        <Link className={css.contentLink} to={'/menu/todo'}>
+          To Do Page
+          <span role="img" aria-label="Greeting icon">
+            💁‍♀️
+          </span>
+        </Link>
+      </div>
+      <div className={css.container}>
+        <h3 className={css.contentLink}>
           We work for content{' '}
           <span role="img" aria-label="Greeting icon">
             💁‍♀️
           </span>
         </h3>
       </div>
-      <div>
-        <h3 className={css.content}>
+      <div className={css.container}>
+        <h3 className={css.contentLink}>
           We work for content{' '}
           <span role="img" aria-label="Greeting icon">
             💁‍♀️
           </span>
         </h3>
       </div>
-      <div>
-        <h3 className={css.content}>
+      <div className={css.container}>
+        <h3 className={css.contentLink}>
           We work for content{' '}
           <span role="img" aria-label="Greeting icon">
             💁‍♀️
           </span>
         </h3>
       </div>
-      <div>
-        <h3 className={css.content}>
-          We work for content{' '}
-          <span role="img" aria-label="Greeting icon">
-            💁‍♀️
-          </span>
-        </h3>
-      </div>
-      <div>
-        <h3 className={css.content}>
-          We work for content{' '}
-          <span role="img" aria-label="Greeting icon">
-            💁‍♀️
-          </span>
-        </h3>
-      </div>
-      <div>
-        <h3 className={css.content}>
+      <div className={css.container}>
+        <h3 className={css.contentLink}>
           We work for content{' '}
           <span role="img" aria-label="Greeting icon">
             💁‍♀️
