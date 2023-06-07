@@ -1,0 +1,10 @@
+/* .imglink {
+  border-right: 40px;
+} */
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

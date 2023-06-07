@@ -1,69 +1,32 @@
-import Slider from 'react-slick';
+import { SliderBox } from '../Slider/SliderBox';
+import { Link } from 'react-router-dom';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
+import css from './Home.module.css';
 export function Home() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true, // Додано властивість autoplay
-    autoplaySpeed: 10000, // Вказано швидкість автоматичної прокрутки (2000 мс = 2 секунди)
-  };
-
   return (
-    <Slider {...settings}>
+    <div>
       <div>
-        <h3>
-          We work for content{' '}
-          <span role="img" aria-label="Greeting icon">
-            💁‍♀️
-          </span>
-        </h3>
+        <SliderBox />
       </div>
-      <div>
-        <h3>
-          We work for content{' '}
-          <span role="img" aria-label="Greeting icon">
-            💁‍♀️
-          </span>
-        </h3>
+
+      <div className={css.container}>
+        <Link to="/menu/weather">
+          <img
+            className={css.imglink}
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxZ3sKNvVZ0SZWa7N7YupHjiOPohkAGBsht0Fn9fbjAwuu262e2UlU-Z2AxH8mXeGxk9E&usqp=CAU"
+            alt="Weather"
+            width={170}
+          />
+        </Link>
+        <Link to="/menu/todo">
+          <img
+            className={css.imglink}
+            src="https://cdn.icon-icons.com/icons2/1526/PNG/512/checklist_106575.png"
+            alt="Weather"
+            width={170}
+          />
+        </Link>
       </div>
-      <div>
-        <h3>
-          We work for content{' '}
-          <span role="img" aria-label="Greeting icon">
-            💁‍♀️
-          </span>
-        </h3>
-      </div>
-      <div>
-        <h3>
-          We work for content{' '}
-          <span role="img" aria-label="Greeting icon">
-            💁‍♀️
-          </span>
-        </h3>
-      </div>
-      <div>
-        <h3>
-          We work for content{' '}
-          <span role="img" aria-label="Greeting icon">
-            💁‍♀️
-          </span>
-        </h3>
-      </div>
-      <div>
-        <h3>
-          We work for content{' '}
-          <span role="img" aria-label="Greeting icon">
-            💁‍♀️
-          </span>
-        </h3>
-      </div>
-    </Slider>
+    </div>
   );
 }
