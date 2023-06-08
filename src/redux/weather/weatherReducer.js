@@ -23,8 +23,8 @@ const contactsReducer = createSlice({
       state.weather.isLoading = true;
     },
     [fetchWeatherData.fulfilled]: (state, { payload }) => {
-      state.weather.location = payload.location;
-      state.weather.current = payload.current;
+      state.weather.location.push(payload.location);
+      state.weather.current.push(payload.current);
       state.weather.isLoading = false;
     },
     [fetchWeatherData.rejected]: (state, { payload }) => {
