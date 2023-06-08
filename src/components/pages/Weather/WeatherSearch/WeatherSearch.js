@@ -1,26 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useFormik } from 'formik';
-import { fetchWether } from '../api/weatherApi';
+import { useDispatch } from 'react-redux';
+import { fetchWeatherData } from '../../../../redux/weather/weatherOperation';
+
+import { SearchByName } from 'redux/weather/weatherReducer';
 
 import css from './WeatherSearch.module.css';
 
 export const WeatherSearch = () => {
-  const [weather, setWeather] = useState([]);
-  const [city, setCity] = useState('');
+  // const [weather, setWeather] = useState([]);
+  const [city, setCity] = useState([]);
   const [checkCity, setCheckCiry] = useState(false);
 
-  const { location, current } = weather;
+  // const { location, current } = weather;
 
-  const getWeather = async () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
     if (checkCity && city.length !== 0) {
-      const isWeather = await fetchWether(city);
-      setWeather(isWeather);
+      dispatch(fetchWeatherData(city));
+      dispatch(SearchByName(city));
       setCheckCiry(false);
     }
-    return;
-  };
-
-  getWeather();
+  }, [checkCity, city, dispatch]);
 
   const formik = useFormik({
     initialValues: {
@@ -34,7 +36,7 @@ export const WeatherSearch = () => {
     },
   });
 
-  console.log(weather);
+  // console.log(weather);
 
   return (
     <form onSubmit={formik.handleSubmit} className={css.form}>

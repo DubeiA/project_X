@@ -1,4 +1,4 @@
-import { SliderBox } from '../Slider/SliderBox';
+import { SliderBox } from '../../Slider/SliderBox';
 import { Link } from 'react-router-dom';
 
 import css from './Home.module.css';
