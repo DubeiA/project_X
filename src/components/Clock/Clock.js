@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import MediaQuery from 'react-responsive';
 import css from './Clock.module.css';
 
 export const Clock = () => {
@@ -13,5 +13,14 @@ export const Clock = () => {
     return () => clearInterval(timer);
   }, []);
 
-  return <div className={css.cl}>{time.toLocaleTimeString()}</div>;
+  return (
+    <div>
+      <MediaQuery minWidth={769}>
+        <div className={css.cl}>{time.toLocaleTimeString()}</div>
+      </MediaQuery>
+      <MediaQuery maxWidth={768}>
+        <div className={css.cl_tel}>{time.toLocaleTimeString()}</div>
+      </MediaQuery>
+    </div>
+  );
 };
