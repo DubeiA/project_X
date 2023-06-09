@@ -8,18 +8,32 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+
+  margin-bottom: 60px;
 }
 
 .item {
-  /* border: 2px solid blueviolet; */
-  width: 250px;
+  position: relative;
+
   border-radius: 7px;
-  margin-right: 90px;
-  margin-top: 40px;
+
+  margin-top: 60px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  background: #4da0b0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f9d696,
+    #5dc0d4
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f9d696,
+    #5dc0d4
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

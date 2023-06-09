@@ -1,4 +1,4 @@
-// import { Clock } from '../../../Clock/Clock';
+import { BsWind, BsFillCloudsFill } from 'react-icons/bs';
 import css from './WeatherCard.module.css';
 
 export const WeatherCard = ({ data, curr }) => {
@@ -9,19 +9,39 @@ export const WeatherCard = ({ data, curr }) => {
   return (
     <div>
       <div className={css.location}>
-        <p> Country : {data.country}</p>
-        <p> City : {data.name}</p>
+        <p className={css.city}>
+          City : <span className={css.city_span}>{data.name}</span>
+        </p>
 
-        <p>Date : {data.localtime}</p>
+        <p className={css.date}>
+          Date : <span className={css.date_span}>{data.localtime}</span>
+        </p>
       </div>
       <div className={css.current}>
-        <img src={curr.condition.icon} alt={curr.condition.text} width={50} />
-        <p>Temp: {curr.temp_c} C</p>
-        <p>Wind: {curr.wind_kph} kph</p>
-        <p>Cloud: {curr.cloud} % </p>
-        <p>Humidity: {curr.humidity}</p>
+        <div className={css.container_current}>
+          <p className={css.temp}> {curr.temp_c} &#8451;</p>
+          <p className={css.wind}>
+            {<BsWind className={css.wind_icon} />} Wind: {curr.wind_kph} kph
+          </p>
+        </div>
+        <div className={css.container_current}>
+          <img
+            className={css.img}
+            src={curr.condition.icon}
+            alt={curr.condition.text}
+            width={50}
+          />
+          <p className={css.wind}>{curr.condition.text}</p>
+        </div>
 
-        <p>{curr.condition.text}</p>
+        <div className={css.container_current}>
+          <p className={css.temp}>Humidity: {curr.humidity} %</p>
+          <p className={css.wind}>
+            {' '}
+            {<BsFillCloudsFill className={css.cloud_icon} />} Cloud:{' '}
+            {curr.cloud} %{' '}
+          </p>
+        </div>
       </div>
     </div>
   );
