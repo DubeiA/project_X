@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/setup-for-work/static/css/main.f5439428.css",
-    "main.js": "/setup-for-work/static/js/main.3ea52630.js",
+    "main.css": "/setup-for-work/static/css/main.13519102.css",
+    "main.js": "/setup-for-work/static/js/main.d9e9fd32.js",
     "static/media/slick.svg": "/setup-for-work/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/setup-for-work/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/setup-for-work/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/setup-for-work/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/setup-for-work/index.html",
-    "main.f5439428.css.map": "/setup-for-work/static/css/main.f5439428.css.map",
-    "main.3ea52630.js.map": "/setup-for-work/static/js/main.3ea52630.js.map"
+    "static/media/slick.woff": "/setup-for-work/static/media/slick.295183786cd8a1389865.woff",
+    "main.13519102.css.map": "/setup-for-work/static/css/main.13519102.css.map",
+    "main.d9e9fd32.js.map": "/setup-for-work/static/js/main.d9e9fd32.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5439428.css",
-    "static/js/main.3ea52630.js"
+    "static/css/main.13519102.css",
+    "static/js/main.d9e9fd32.js"
   ]
 }
