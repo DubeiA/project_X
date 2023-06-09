@@ -112,3 +112,129 @@
 .cloud_icon {
   margin-bottom: -5px;
 }
+
+/* ======================== */
+
+.location_tel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.location_tel::after {
+  /* z-index: -1; */
+  content: '';
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid brown;
+  /* height: 100%; */
+  /* background: rgb(220, 220, 220); */
+  /* left: 0; */
+  top: 35px;
+  /* border-radius: 10px; */
+}
+
+.current_tel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  /* height: 200px; */
+}
+
+.container_current_tel {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.country_tel {
+  font-family: 'Playfair Display', serif;
+  /* font-size: 12px; */
+  color: #ff7300;
+  /* padding: 5px; */
+  /* text-shadow: 1px 1px 2px #ff7300; */
+}
+
+.country_span_tel {
+  font-weight: 700;
+}
+
+.city_tel {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  color: #ff7300;
+  /* padding: 5px; */
+}
+
+.city_span_tel {
+  font-weight: 700;
+}
+
+.date_tel {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  color: #ff7300;
+  padding: 5px;
+}
+
+.date_span_tel {
+  font-weight: 700;
+}
+
+/* ========================= */
+
+.temp_tel {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+
+  padding: 10px;
+  margin: 0;
+  /* border: 1px solid coral; */
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.wind_tel {
+  /* font-size: 29px; */
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+
+  /* padding: 15px; */
+  margin: 0;
+
+  color: coral;
+
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.container_current_tel_img {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.img_tel {
+  padding: 0;
+  /* margin: 0; */
+
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.wind_icon_tel {
+  margin-bottom: -5px;
+}
+
+.cloud_icon_tel {
+  margin-bottom: -5px;
+}
