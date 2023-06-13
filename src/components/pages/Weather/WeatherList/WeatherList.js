@@ -11,6 +11,8 @@ import css from './WeatherList.module.css';
 
 import MediaQuery from 'react-responsive';
 
+import { MobileWeatherCard } from '../MobileWeatherCard/MobileWeatherCard';
+
 export const WeatherList = () => {
   const location = useSelector(getWeatherLocation);
   const current = useSelector(getWeatherCurrent);
@@ -41,8 +43,11 @@ export const WeatherList = () => {
             {location.map((locat, index) => {
               const curr = current[index];
               return (
-                <li className={css.item} key={nanoid()}>
-                  <WeatherCard data={locat} curr={curr} />
+                <li
+                  className={curr.cloud >= 50 ? css.itemCloud : css.itemSun}
+                  key={nanoid()}
+                >
+                  <MobileWeatherCard data={locat} curr={curr} />
                 </li>
               );
             })}

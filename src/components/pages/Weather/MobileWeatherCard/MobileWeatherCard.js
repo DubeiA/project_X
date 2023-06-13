@@ -1,4 +1,4 @@
-import css from '../WeatherCard/WeatherCard.module.css';
+import css from './MobileWeatherCard.module.css';
 import { BsWind, BsFillCloudsFill } from 'react-icons/bs';
 
 export const MobileWeatherCard = ({ data, curr }) => {

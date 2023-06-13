@@ -3,60 +3,44 @@ import css from './WeatherCard.module.css';
 
 import MediaQuery from 'react-responsive';
 
-import { MobileWeatherCard } from '../MobileWeatherCard/MobileWeatherCard';
-
 export const WeatherCard = ({ data, curr }) => {
-  //  const isDesktopOrLaptop = useMediaQuery({
-  //    query: '(min-width: 1224px)',
-  //  });
-  //  const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' });
-  //  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
-  //  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
-  //  const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' });
-
   return (
     <div>
-      <MediaQuery minWidth={769}>
-        <div className={css.location}>
-          <p className={css.city}>
-            City : <span className={css.city_span}>{data.name}</span>
-          </p>
+      <div className={css.location}>
+        <p className={css.city}>
+          City : <span className={css.city_span}>{data.name}</span>
+        </p>
 
-          <p className={css.date}>
-            Date : <span className={css.date_span}>{data.localtime}</span>
+        <p className={css.date}>
+          Date : <span className={css.date_span}>{data.localtime}</span>
+        </p>
+      </div>
+      <div className={css.current}>
+        <div className={css.container_current}>
+          <p className={css.temp}> {curr.temp_c} &#8451;</p>
+          <p className={css.wind}>
+            {<BsWind className={css.wind_icon} />} Wind: {curr.wind_kph} kph
           </p>
         </div>
-        <div className={css.current}>
-          <div className={css.container_current}>
-            <p className={css.temp}> {curr.temp_c} &#8451;</p>
-            <p className={css.wind}>
-              {<BsWind className={css.wind_icon} />} Wind: {curr.wind_kph} kph
-            </p>
-          </div>
-          <div className={css.container_current}>
-            <img
-              className={css.img}
-              src={curr.condition.icon}
-              alt={curr.condition.text}
-              width={50}
-            />
-            <p className={css.wind}>{curr.condition.text}</p>
-          </div>
-
-          <div className={css.container_current}>
-            <p className={css.temp}>Humidity: {curr.humidity} %</p>
-            <p className={css.wind}>
-              {' '}
-              {<BsFillCloudsFill className={css.cloud_icon} />} Cloud:{' '}
-              {curr.cloud} %{' '}
-            </p>
-          </div>
+        <div className={css.container_current}>
+          <img
+            className={css.img}
+            src={curr.condition.icon}
+            alt={curr.condition.text}
+            width={50}
+          />
+          <p className={css.wind}>{curr.condition.text}</p>
         </div>
-      </MediaQuery>
 
-      <MediaQuery maxWidth={768}>
-        <MobileWeatherCard data={data} curr={curr} />
-      </MediaQuery>
+        <div className={css.container_current}>
+          <p className={css.temp}>Humidity: {curr.humidity} %</p>
+          <p className={css.wind}>
+            {' '}
+            {<BsFillCloudsFill className={css.cloud_icon} />} Cloud:{' '}
+            {curr.cloud} %{' '}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
