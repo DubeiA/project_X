@@ -6,16 +6,12 @@
 }
 
 .location::after {
-  /* z-index: -1; */
   content: '';
   position: absolute;
   width: 100%;
   border-bottom: 1px solid brown;
-  /* height: 100%; */
-  /* background: rgb(220, 220, 220); */
-  /* left: 0; */
+
   top: 65px;
-  /* border-radius: 10px; */
 }
 
 .current {
@@ -40,7 +36,6 @@
   font-size: 24px;
   color: #ff7300;
   padding: 5px;
-  /* text-shadow: 1px 1px 2px #ff7300; */
 }
 
 .country_span {
@@ -68,8 +63,6 @@
 .date_span {
   font-weight: 700;
 }
-
-/* ========================= */
 
 .temp {
   font-size: 29px;
@@ -112,5 +105,3 @@
 .cloud_icon {
   margin-bottom: -5px;
 }
-
-/* ======================== */

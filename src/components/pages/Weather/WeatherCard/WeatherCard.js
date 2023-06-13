@@ -35,9 +35,8 @@ export const WeatherCard = ({ data, curr }) => {
         <div className={css.container_current}>
           <p className={css.temp}>Humidity: {curr.humidity} %</p>
           <p className={css.wind}>
-            {' '}
-            {<BsFillCloudsFill className={css.cloud_icon} />} Cloud:{' '}
-            {curr.cloud} %{' '}
+            {<BsFillCloudsFill className={css.cloud_icon} />} Cloud:
+            {curr.cloud} %
           </p>
         </div>
       </div>
