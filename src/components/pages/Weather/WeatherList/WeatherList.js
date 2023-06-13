@@ -22,8 +22,12 @@ export const WeatherList = () => {
           <ul className={css.list}>
             {location.map((locat, index) => {
               const curr = current[index];
+
               return (
-                <li className={css.item} key={nanoid()}>
+                <li
+                  className={curr.cloud >= 50 ? css.itemCloud : css.itemSun}
+                  key={nanoid()}
+                >
                   <WeatherCard data={locat} curr={curr} />
                 </li>
               );
