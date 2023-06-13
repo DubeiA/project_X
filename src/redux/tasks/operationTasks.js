@@ -33,15 +33,17 @@ export const addTask = createAsyncThunk(
   }
 );
 
-// // DELETE @ /tasks/:id
-// export const deleteTask = createAsyncThunk(
-//   'tasks/deleteTask',
-//   async (taskId, thunkAPI) => {
-//     try {
-//       const response = await axios.delete(`/tasks/${taskId}`);
-//       return response.data;
-//     } catch (e) {
-//       return thunkAPI.rejectWithValue(e.message);
-//     }
-//   }
-// );
+// DELETE @ /tasks/:id
+export const deleteTask = createAsyncThunk(
+  'tasks/deleteTask',
+  async (taskId, thunkAPI) => {
+    try {
+      const response = await axios.delete(
+        `https://647f1de7c246f166da9019f5.mockapi.io/tasks/${taskId}`
+      );
+      return response.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
