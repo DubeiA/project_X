@@ -1,8 +1,6 @@
 import { BsWind, BsFillCloudsFill } from 'react-icons/bs';
 import css from './WeatherCard.module.css';
 
-import MediaQuery from 'react-responsive';
-
 export const WeatherCard = ({ data, curr }) => {
   return (
     <div>
