@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchWeatherData } from './weatherOperation';
 
-const contactsReducer = createSlice({
+const weatherReducer = createSlice({
   name: 'weather',
   initialState: {
     weather: {
@@ -18,7 +18,7 @@ const contactsReducer = createSlice({
     },
   },
   extraReducers: {
-    // Fecth Contact
+    // Fecth Weather
     [fetchWeatherData.pending]: state => {
       state.weather.isLoading = true;
     },
@@ -31,37 +31,9 @@ const contactsReducer = createSlice({
       state.weather.isLoading = false;
       state.weather.error = payload;
     },
-    // // Add Contact
-    // [addContact.pending]: state => {
-    //   state.contacts.isLoading = true;
-    // },
-    // [addContact.fulfilled]: (state, { payload }) => {
-    //   state.contacts.entities.push(payload);
-    //   state.contacts.isLoading = false;
-    // },
-    // [addContact.rejected]: (state, { payload }) => {
-    //   state.contacts.isLoading = false;
-    //   state.contacts.error = payload;
-    // },
-    // // delete contact
-    // [deleteContact.pending]: state => {
-    //   state.contacts.isLoading = true;
-    // },
-    // [deleteContact.fulfilled]: (state, { payload }) => {
-    //   state.contacts.isLoading = false;
-    //   state.contacts.error = null;
-    //   const index = state.contacts.entities.findIndex(
-    //     contactID => contactID.id === payload.id
-    //   );
-    //   state.contacts.entities.splice(index, 1);
-    // },
-    // [deleteContact.rejected]: (state, { payload }) => {
-    //   state.contacts.isLoading = false;
-    //   state.contacts.error = payload;
-    // },
   },
 });
 
-export const { SearchByName } = contactsReducer.actions;
+export const { SearchByName } = weatherReducer.actions;
 
-export default contactsReducer.reducer;
+export default weatherReducer.reducer;

@@ -1,17 +1,16 @@
 import { useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
+import MediaQuery from 'react-responsive';
 
-import { WeatherCard } from '../WeatherCard/WeatherCard';
 import {
   getWeatherCurrent,
   getWeatherLocation,
 } from '../../../../redux/weather/selectors';
 
-import css from './WeatherList.module.css';
-
-import MediaQuery from 'react-responsive';
-
+import { WeatherCard } from '../WeatherCard/WeatherCard';
 import { MobileWeatherCard } from '../MobileWeatherCard/MobileWeatherCard';
+
+import css from './WeatherList.module.css';
 
 export const WeatherList = () => {
   const location = useSelector(getWeatherLocation);

@@ -8,7 +8,7 @@ export const Clock = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setTime(new Date());
-    }, 1000); // Оновлювати кожну хвилину
+    }, 1000);
 
     return () => clearInterval(timer);
   }, []);

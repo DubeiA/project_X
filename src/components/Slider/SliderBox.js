@@ -12,8 +12,8 @@ export function SliderBox() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true, // Додано властивість autoplay
-    autoplaySpeed: 10000, // Вказано швидкість автоматичної прокрутки (2000 мс = 2 секунди)
+    autoplay: true,
+    autoplaySpeed: 10000,
   };
 
   return (
